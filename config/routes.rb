@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users
   # devise_for :users
   devise_for :dairies
+  get 'articles' => 'home#index'
   get 'reports/member'
   get 'reports/daily'
   get 'reports/member_collection'

@@ -3661,10 +3661,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 	z-index: 1;
 	width: 100%;
 	bottom: 0;
-	background-image: -webkit-linear-gradient(left, #c49cde, #c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: -moz-linear-gradient(left, #c49cde, ##c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: -o-linear-gradient(left, #c49cde, ##c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: linear-gradient(to right, #c49cde, #c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	/**/
 }
 .nav-item .sub-item:before {
 	content: '';	
@@ -3678,10 +3675,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 	left: 0;
 	right: 0;
 	top: 0;
-	background-image: -webkit-linear-gradient(left, #c49cde, #c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: -moz-linear-gradient(left, #c49cde, ##c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: -o-linear-gradient(left, #c49cde, ##c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-	background-image: linear-gradient(to right, #c49cde, #c49cde 12.5%, #2dce89 12.5%, #2dce89 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	
 }
 
 .icon-shape{
@@ -4071,7 +4065,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     background: -moz-linear-gradient(top, rgba(255, 86, 65, 1) 0%, rgba(253, 50, 97, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(255, 86, 65, 1) 0%, rgba(253, 50, 97, 1) 100%);
     background: linear-gradient(to bottom, rgba(255, 86, 65, 1) 0%, rgba(253, 50, 97, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff5641', endColorstr='#fd3261', GradientType=0);
+    /*filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff5641', endColorstr='#fd3261', GradientType=0);*/
     border-radius: 4px;
     text-align: center;
     margin: 60px 0 50px;
@@ -4150,7 +4144,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     background: -moz-linear-gradient(top, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
     background: -webkit-linear-gradient(top, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
     background: linear-gradient(to bottom, rgba(252, 190, 27, 1) 1%, rgba(248, 86, 72, 1) 99%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcbe1b', endColorstr='#f85648', GradientType=0);
+    /*filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcbe1b', endColorstr='#f85648', GradientType=0);*/
 }
 .dash-box-color-2 .dash-box-icon:after {
     background: rgba(254, 224, 54, 0.81);
@@ -4167,7 +4161,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     background: -moz-linear-gradient(top, rgba(183,71,247,1) 0%, rgba(108,83,220,1) 100%);
     background: -webkit-linear-gradient(top, rgba(183,71,247,1) 0%,rgba(108,83,220,1) 100%);
     background: linear-gradient(to bottom, rgba(183,71,247,1) 0%,rgba(108,83,220,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b747f7', endColorstr='#6c53dc',GradientType=0 );
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b747f7', endColorstr='#6c53dc',GradientType=0 );*/
 }
 .dash-box-color-3 .dash-box-icon:after {
     background: rgba(180, 70, 245, 0.76);
@@ -13916,7 +13910,7 @@ a.icon {
 }
 .btn-list {
 	margin-bottom: -.5rem;
-	font-size: 0;
+	font-size: 0rem;
 }
 .btn-list>.btn, .btn-list>.dropdown {
 	margin-bottom: .5rem;
@@ -14828,7 +14822,7 @@ a.card-tabs-item.active {
 .avatar-list {
 	margin: 0 0 -.5rem;
 	padding: 0;
-	font-size: 0;
+	font-size: 0rem;
 }
 .avatar-list .avatar {
 	margin-bottom: .5rem;
@@ -16129,7 +16123,7 @@ a.tag-addon:hover {
 }
 .tags {
 	margin-bottom: -.5rem;
-	font-size: 0;
+	font-size: 0rem;
 }
 .tags>.tag {
 	margin-bottom: .5rem;

@@ -79,7 +79,7 @@ $(function(e) {
 	  });
 			 /** Function for remove card */
 	  $('[data-toggle="card-remove"]').on('click', function(e) {
-		let $card = $(this).closest(DIV_CARD);
+		var $card = $(this).closest(DIV_CARD);
 
 		$card.remove();
 
@@ -89,7 +89,7 @@ $(function(e) {
 
 	  /** Function for collapse card */
 	  $('[data-toggle="card-collapse"]').on('click', function(e) {
-		let $card = $(this).closest(DIV_CARD);
+		var $card = $(this).closest(DIV_CARD);
 
 		$card.toggleClass('card-collapsed');
 
@@ -97,7 +97,7 @@ $(function(e) {
 		return false;
 	  });
 	  $('[data-toggle="card-fullscreen"]').on('click', function(e) {
-		let $card = $(this).closest(DIV_CARD);
+		var $card = $(this).closest(DIV_CARD);
 
 		$card.toggleClass('card-fullscreen').removeClass('card-collapsed');
 

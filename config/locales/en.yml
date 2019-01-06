@@ -16,18 +16,49 @@
 #
 # This would use the information in config/locales/es.yml.
 #
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home: "Home"
+  user: "Member"
+  new: "New"
+  create: "Create"
+  all: "All"
+  colection: "Collection"
+  rate: "Rate"
+  report: "Report"
+  cow: "Cow"
+  buffalo: "Buffalo"
+  daily: "Daily"
+  dairy: "Dairy"
+  id: "Number"
+  name: "Name"
+  mobile: "Mobile"
+  address: "Address"
+  enter: "Enter"
+  animal: "Animal"
+  snf: "SNF"
+  fat: "Fat"
+  degree: "Degree"
+  litre: "Litre"
+  total: "Total"
+  date: "Date"
+  time: "Time"
+  morning: "Morning"
+  evening: "Evening"
+  current: "Current"
+  remaning: "Remaning"
+  search: "Search"
+  amount: "Amount"
+  profile: "Profile"
+  setting: "Setting"
+  change: "Change"
+  password: "Password"
+  logout: "Sign out"
+  email: "Email"
+  number: "Number"
+  type: "Type"
+
+
+

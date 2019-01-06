@@ -1,0 +1,132 @@
+<!-- Navbar-->
+        <header class="app-header header shadow-none relative">
+          <div id="particles-js" ></div>
+            <div class="container">
+            
+            <!-- Header Background Animation-->
+            <div id="canvas" class="gradient"></div>
+            
+            <!-- Navbar Right Menu-->
+            <div class="container-fluid">
+              <div class="d-flex">
+                <a class="header-brand" href="/">
+                  <img alt="ren logo" class="header-brand-img" src="/assets/images/brand/logo.png">
+                </a>
+                <div class="d-flex order-lg-2 ml-auto">
+                  
+                  <div class="dropdown">
+                    <a class="nav-link pr-0 leading-none d-flex" data-toggle="dropdown" href="#">
+                      <span class="avatar avatar-md brround" style="background-image: url(/assets/images/faces/female/25.jpg*/)"></span>
+                      <span class="ml-2 d-none d-lg-block">
+                        <span class="text-white"><%= t(:profile) %></span>
+                      </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                      <% if current_dairy.present? %>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon mdi mdi-account-outline"></i> <%= t(:profile) %></a>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon mdi mdi-settings"></i> <%= t(:setting) %></a>
+                        <!-- <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span> <i class="dropdown-icon mdi mdi-message-outline"></i> Inbox</a> -->
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon mdi mdi-comment-check-outline"></i> <%= t(:change) %> <%= t(:password) %></a>
+                      <% end %>
+                      <div class="dropdown-divider"></div>
+                      <!-- <a class="dropdown-item" href="/dairies/sign_in"><i class="dropdown-icon mdi mdi-compass-outline"></i> Log In</a> -->
+                      <% if current_dairy.present? %>
+                        <%= link_to("<i class='dropdown-icon mdi mdi-logout-variant'></i> #{t(:logout)}".html_safe, destroy_dairy_session_path, method: :delete, class: "dropdown-item") %> 
+                      <% else %>
+                        <a class="dropdown-item" href="/dairies/sign_in"><i class="dropdown-icon mdi mdi-compass-outline"></i> Log In</a>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                  <span class="header-toggler-icon"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <!-- Horizantal menu-->
+        <div class="ren-navbar" id="headerMenuCollapse">
+          <div class="container">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link " href="/">
+                  <i class="fas fa-home"></i>
+                  <span> <%= t(:home) %></span>
+                </a>
+              </li>
+              <li class="nav-item with-sub">
+                <a class="nav-link" href="#"><i class="fas fa-snowflake"></i> <span><%= t(:user) %></span></a>
+                <div class="sub-item">
+                  <ul>
+                    <li>
+                      <a href="/users/new"><%= t(:new) + " " + t(:user)%></a>
+                    </li>
+                    <li>
+                      <a href="/users"><%= t(:all) + " " + t(:user)%> </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- dropdown-menu -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/collections">
+                  <i class="fas fa-window-restore"></i>
+                  <span><%= t(:new) + " " + t(:colection)%></span>
+                </a>
+              </li>
+              <li class="nav-item with-sub">
+                <a class="nav-link" href="#"><i class="fas fa-snowflake"></i> <span><%= t(:rate)%></span></a>
+                <div class="sub-item">
+                  <ul>
+                    <li>
+                      <a href="/rates"><%= t(:all) + " " + t(:rate)%></a>
+                    </li>
+                    <li>
+                      <a href="/rates/new"><%= t(:new) + " " + t(:rate)%> </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+               <li class="nav-item with-sub">
+                <a class="nav-link" href="#"><i class="fas fa-snowflake"></i> <span><%= t(:colection) + " " + t(:report)%></span></a>
+                <div class="sub-item">
+                  <ul>
+                    <li>
+                      <a href="/reports/daily?time=both&animal_type=both"><%=  t(:daily)%></a>
+                    </li>
+                    <li>
+                      <a href="/reports/member"><%= t(:user)%></a>
+                    </li>
+                    <li>
+                      <a href="/reports/dairy"><%=  t(:dairy)%></a>
+                    </li>
+                    <li>
+                      <a href="/reports/all_member"><%= t(:all) + " " + t(:user)%></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item with-sub">
+                <a class="nav-link" href="#"><i class="fas fa-snowflake"></i> <span><%= t(:user) + " " + t(:report)%></span></a>
+                <div class="sub-item">
+                  <ul>
+                    <li>
+                      <a href="/reports/user"><%= t(:all) %></a>
+                    </li>
+                    <li>
+                      <a href="/reports/user?animal_type=true"><%= t(:cow)%> </a>
+                    </li>
+                    <li>
+                      <a href="/reports/user?animal_type=false"><%= t(:buffalo)%> </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <!-- Horizantal menu-->
+        

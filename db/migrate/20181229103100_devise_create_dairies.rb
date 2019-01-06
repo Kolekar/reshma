@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class DeviseCreateDairies < ActiveRecord::Migration
+class DeviseCreateDairies < ActiveRecord::Migration[5.0]
   def change
     create_table :dairies do |t|
       ## Database authenticatable

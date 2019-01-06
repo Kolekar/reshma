@@ -1,0 +1,11 @@
+<tr id = collectin_<%= collection.id%>>
+  <td><%= collection.user.name %></td>
+  <td><%= collection.fat %></td>
+  <td><%= collection.snf %></td>
+  <td><%= collection.degree %></td>
+  <td><%= collection.rate %></td>
+  <td><%= collection.litre %></td>
+  <td><%= collection.animal %></td>
+  
+  <td><%= button_tag 'Destroy', class: "btn btn-primary ml-auto", onclick: "dedlete_record('#{collection.id }')" %></td>
+</tr>

@@ -1,0 +1,89 @@
+<div class="container">
+          <div class="side-app">
+            <div class="page-header">
+              <a href = '<%=rates_path%>' class="btn btn-success"><i class="si si-user-follow mr-2"></i>All Rates</a>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Rates</li>
+              </ol>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12">
+                <%= form_for @rate, html:{ class: "card"} do |f| %>
+                    <%= f.error_notification message: f.object.errors.full_messages.join(', ') if f.object.errors.present? %>
+                  <div class="card-header">
+                    <h3 class="card-title"><%= action %> Rate</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6 col-lg-3">
+                        <div class="form-group">
+                          <label class="form-label">Fat *</label>
+                          <%= f.text_field :fat, class:"form-control", placeholder: "Fat" %>
+                          
+                          <!-- <input type="text" class="form-control is-invalid state-invalid" name="example-text-input" placeholder="Name">
+                          <div class="invalid-feedback">Name Can't be Blank..</div> -->
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="form-group">
+                          <label class="form-label">SNF *</label>
+                          <%= f.text_field :snf, class:"form-control", placeholder: "SNF" %>
+                          
+                          <!-- <input type="text" class="form-control is-invalid state-invalid" name="example-text-input" placeholder="Name">
+                          <div class="invalid-feedback">Name Can't be Blank..</div> -->
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="form-group">
+                          <label class="form-label">Degree *</label>
+                          <%= f.text_field :degree, class:"form-control", placeholder: "Degree" %>
+                          
+                          <!-- <input type="text" class="form-control is-invalid state-invalid" name="example-text-input" placeholder="Name">
+                          <div class="invalid-feedback">Name Can't be Blank..</div> -->
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <div class="form-group">
+                          <label class="form-label">Rate *</label>
+                          <%= f.text_field :rate, class:"form-control", placeholder: "Rate" %>
+                          
+                          <!-- <input type="text" class="form-control is-invalid state-invalid" name="example-text-input" placeholder="Name">
+                          <div class="invalid-feedback">Name Can't be Blank..</div> -->
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-lg-4">
+                        <div class="form-group ">
+                          <div class="form-label">Animal Type</div>
+                          <div class="custom-controls-stacked" style="display: inline-flex;">
+                            <label class="custom-control custom-radio mr-6">
+                              
+                              <%= f.radio_button :animal_type, true, :checked => true, class: "custom-control-input" %>
+                              <span class="custom-control-label">Cow</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              
+                              <%= f.radio_button :animal_type, false,class: "custom-control-input" %>
+                              <span class="custom-control-label">Buffalo</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="card-footer text-right">
+                    <div class="d-flex">
+                      
+                      <%= f.button :submit, class: "btn btn-primary ml-auto"%>
+                      
+                    </div>
+                  </div>
+                <%end%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

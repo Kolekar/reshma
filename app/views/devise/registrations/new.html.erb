@@ -1,0 +1,57 @@
+
+  <body class="login-img bg-gradient">
+    <div class="page">
+      <div class="page-single">
+        <div class="container">
+          <div class="row">
+            <div class="col col-login mx-auto">
+              <div class="text-center mb-6 ">
+                <img src="assets/images/brand/logo.png" class="h-6" alt="">
+              </div>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{class: "card"}) do |f| %>
+                <div class="card-body p-6">
+                  <div class="card-title text-center">Create New Account</div>
+                  <div class="form-group">
+                    <label class="form-label">Email address</label>
+                    <%= f.text_field :email,
+                required: false,
+                autofocus: true,
+                autocomplete: "email",  class: "form-control", type: "email", placeholder: "Enter email"  %>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Password
+                    </label>
+                    <%= f.text_field :password,
+                required: false,
+                class: "form-control", type: "password", placeholder: "Password"  %>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Confirm Password
+                    </label>
+                    <%= f.text_field :password_confirmation,
+                required: false,
+                class: "form-control", type: "password", placeholder: "Password"  %>
+                  </div>
+                  <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" />
+                      <span class="custom-control-label">Agree the <a href="terms.html">terms and policy</a></span>
+                    </label>
+                  </div>
+                  <div class="form-footer">
+                    <button type="submit" class="btn btn-primary btn-block">Create new account</button>
+                  </div>
+                  <div class="text-center text-muted mt-4">
+                  Already have account? <a href="/dairies/sign_in">Sign in</a>
+                </div>
+                </div>
+
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+

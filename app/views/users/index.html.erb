@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+          <div class="side-app">
+            <div class="page-header">
+              
+              <a href = '<%=new_user_path%>' class="btn btn-success"><i class="si si-user-follow mr-2"></i><%= t(:new) + " " + t(:user)%></a>
+           
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Users</li>
+              </ol>
+            </div>
+
+            <div class="row ">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                <div class="card" >
+                  <div class="card-header border-bottom">
+                    <h5 class="card-title"><%= t(:all) + " " + t(:user)%></h5>
+                  </div>
+                  <div class="emp-tab">
+                    <div class="table-responsive">
+                      <table class="table  table-hover table-striped">
+                        <thead class="text-primary">
+                          <tr>
+                            <th><%= t(:id) %></th>
+                            <th><%= t(:name) %></th>
+                            <th><%= t(:mobile) %></th>
+                            <th><%= t(:email) %></th>
+                            <th><%= t(:address) %></th>
+                            <th colspan="2"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% @users.each do |user| %>
+                            <tr>
+                              <td><%=user.id%></td>
+                              <td><%=user.name%></td>
+                              <td><%=user.mobile%></td>
+                              <td><%=user.email%></td>
+                              <td><%=user.address%></td>
+                              <td>
+                                <a href="<%= edit_user_path(user) %>" class="btn btn-outline-info mr-3" data-toggle="tooltip" title="" data-original-title="Edit User"><i class="si si-pencil"></i></a>
+                                
+                                <a href="<%= user_path(user) %>" class="btn btn-outline-danger" data-toggle="tooltip" title="" data-original-title="Delete User" data-confirm="Are you sure?" data-method="delete" ><i class="si si-trash" ></i></a>
+                              </td>
+                            </tr>
+                          <%end%>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+<br>
+

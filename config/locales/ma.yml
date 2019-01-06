@@ -1,0 +1,63 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ma:
+  home: "मुख्य पृष्ट"
+  user: "सभासद"
+  new: "नवीन"
+  create: "तयार करा"
+  all: "सर्व"
+  colection: "संकलन"
+  rate: "दर"
+  report: "अहवाल"
+  cow: "गाय"
+  buffalo: "म्हशी"
+  daily: "दररोज"
+  dairy: "दुग्धशाळा"
+  id: "क्रमांक "
+  name: "नाव"
+  mobile: "मोबाईल"
+  address: "पत्ता"
+  enter: "Enter"
+  animal: "प्राणी"
+  snf: "एस. एन. एफ."
+  fat: "फ्याट "
+  degree: "डीग्री "
+  litre: "लिटर"
+  total: "एकूण"
+  date: "तारीख"
+  time: "वेळ"
+  morning: "सकाळी"
+  evening: "संध्याकाळी"
+  current: "चालू"
+  remaning: "उर्वरित"
+  search: "शोध"
+  amount: "रक्कम"
+  profile: "प्रोफाइल"
+  setting: "सेटिंग"
+  change: "बदल"
+  password: "पासवर्ड"
+  logout: "बाहेर पडा"
+  email: "Email"
+  number: "क्रमांक "
+  type: "Type"
+
+

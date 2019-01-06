@@ -1,0 +1,121 @@
+<p id="notice"><%= notice %></p>
+  <div class="container">
+    <div class="side-app">
+            <!-- <div class="page-header">
+              <h4 class="page-title">Daily</h4>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">collection</li>
+              </ol>
+            </div>
+ -->
+            <div class="row">
+              <div class="col-lg-12">
+                <%= form_tag '/reports/dairy', method: 'get', html:{ class: "card"} do |f| %>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-8 col-lg-2 mb-2">
+                        <div class="form-group">
+                          <label class="form-label">From</label>
+                          <%= text_field_tag :from_date, (params[:from_date] ? params[:from_date] : (Date.today-6.day)).strftime('%d/%m/%Y'), class:"form-control", placeholder: "Date" %>
+                        </div>
+                      </div>
+                      <div class="col-md-8 col-lg-2 mb-2">
+                        <div class="form-group">
+                          <label class="form-label">To</label>
+                          <%= text_field_tag :to_date, (params[:to_date] ? params[:to_date] : Date.today).strftime('%d/%m/%Y'), class:"form-control", placeholder: "Date" %>
+                        </div>
+                      </div>
+                       <div class="col-md-4 col-lg-4">
+                        <div class="form-group ">
+                          <div class="form-label">Time</div>
+                          <div class="custom-controls-stacked" style="display: inline-flex;">
+                            <label class="custom-control custom-radio mr-6">
+                              <input class="custom-control-input" type="radio" value="true" <%= 'checked="checked"' if params[:time] == 'true' %> name="time" id="time_true">
+                              <span class="custom-control-label">Morning</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              <input class="custom-control-input" type="radio" value="false" name="time" id="time_false" <%= 'checked="checked"' if params[:time] == 'false' %>>
+                              <span class="custom-control-label">Evening</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              <input class="custom-control-input" type="radio" value="both" name="time" id="time_both" <%= 'checked="checked"' if params[:animal_type].nil? || params[:animal_type] == 'both' %>>
+                              <span class="custom-control-label">Both</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-lg-4">
+                        <div class="form-group ">
+                          <div class="form-label">Animal Type</div>
+                          <div class="custom-controls-stacked" style="display: inline-flex;">
+                            <label class="custom-control custom-radio mr-6">
+                              
+                              <input class="custom-control-input" type="radio" value="true" <%= 'checked="checked"' if params[:animal_type] == 'true' %> name="animal_type" id="collection_animal_type_true">
+                              <span class="custom-control-label">Cow</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              
+                              <input class="custom-control-input" type="radio" value="false" name="animal_type" id="collection_animal_type_false" <%= 'checked="checked"' if params[:animal_type] == 'false' %>>
+                              <span class="custom-control-label">Buffalo</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              
+                              <input class="custom-control-input" type="radio" value="all" name="animal_type" id="collection_animal_type_all" <%= 'checked="checked"' if params[:time].nil? || params[:animal_type] == 'both' %>>
+                              <span class="custom-control-label">Both</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-lg-2">
+                        <%= button_tag :submit, class: "btn btn-primary ml-auto" %>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+      <div class="side-app">
+        <div class="row ">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+            <div class="card" >
+              <div class="card-header border-bottom">
+                <h5 class="card-title">Total Colection Amount: <%=@collections.collect(&:total).sum %></h5>
+              </div>
+              <div class="emp-tab">
+                <div class="table-responsive">
+                  <table class="table  table-hover table-striped display" id="data-table">
+                    <thead class="text-primary">
+                      <tr>
+                        <th>Collection Date</th>
+                        <th>Total Litre</th>
+                        <th>Total</th>
+                        <th>Animal Type</th>
+                        <th>Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% @collections.each do |collection| %>
+                        <tr>
+                          <td><%= collection.collection_date.strftime('%d/%m/%Y') %></td>
+                          <td><%= collection.litres %></td>
+                          <td><%= collection.total %></td>
+                          <td><%= collection.animal %></td>
+                          <td><%= collection.collection_time %></td>
+                        </tr>
+                      <%end%>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+

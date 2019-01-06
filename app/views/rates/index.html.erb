@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+          <div class="side-app">
+            <div class="page-header">
+              
+              <a href = '<%=new_rate_path%>' class="btn btn-success"><i class="si si-user-follow mr-2"></i>Create New Rate</a>
+           
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Rates</li>
+              </ol>
+            </div>
+
+            <div class="row ">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                <div class="card" >
+                  <div class="card-header border-bottom">
+                    <h5 class="card-title">All Rates</h5>
+                  </div>
+                  <div class="emp-tab">
+                    <div class="table-responsive">
+                      <table class="table  table-hover table-striped">
+                        <thead class="text-primary">
+                          <tr>
+                            <th>Fst</th>
+                            <th>SNF</th>
+                            <th>Degree</th>
+                            <th>Rate</th>
+                            <th>Animal Type</th>
+                            <th colspan="2"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% @rates.each do |rate| %>
+                            <tr>
+                              <td><%=rate.fat%></td>
+                              <td><%=rate.snf%></td>
+                              <td><%=rate.degree%></td>
+                              <td><%=rate.rate%></td>
+                              <td><%=rate.animal%></td>
+                              <td>
+                                <a href="<%= edit_rate_path(rate) %>" class="btn btn-outline-info mr-3" data-toggle="tooltip" title="" data-original-title="Edit Rate"><i class="si si-pencil"></i></a>
+                                
+                                <a href="<%= rate_path(rate) %>" class="btn btn-outline-danger" data-toggle="tooltip" title="" data-original-title="Delete Rate" data-confirm="Are you sure?" data-method="delete" ><i class="si si-trash" ></i></a>
+                              </td>
+                            </tr>
+                          <%end%>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>

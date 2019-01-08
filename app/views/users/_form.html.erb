@@ -12,7 +12,7 @@
             <div class="row">
               <div class="col-lg-12">
                 <%= form_for @user, html:{ class: "card"} do |f| %>
-                    <%= f.error_notification message: f.object.errors.full_messages.join(', ') if f.object.errors.present? %>
+                    <%=  f.object.errors.full_messages.join(', ') if f.object.errors.present? %>
                   <div class="card-header">
                     <h3 class="card-title"><%= action %> <%= t(:user)%></h3>
                   </div>
